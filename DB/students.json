@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "6110ff643b50199361450c2e"
+  },
+  "id": "211981659",
+  "firstName": "שרי",
+  "lastName": "גרליץ",
+  "phone": "0583203751",
+  "email": "saroosh3751@gmail.com",
+  "BalanceOfPayment": "0",
+  "tests": {
+    "הלכה": "",
+    "השקפה": "99",
+    "תורה": "98",
+    "ירמיהו": "89",
+    "Java": "98",
+    "אנגלית": "100",
+    "מערכות הפעלה": "",
+    "C++": "89",
+    "Python": "87",
+    "אלגוריתמיקה וגרפים": "100"
+  },
+  "schoolYear": "2021"
+},{
+  "_id": {
+    "$oid": "6110ff8e3b50199361450c2f"
+  },
+  "id": "212013528",
+  "firstName": "לאה",
+  "lastName": "המאירי",
+  "phone": "0583205665",
+  "email": "l0583205665",
+  "BalanceOfPayment": "1200",
+  "tests": {
+    "הלכה": "100",
+    "השקפה": "99",
+    "תורה": "98",
+    "ירמיהו": "89",
+    "Java": "98",
+    "אנגלית": "100",
+    "מערכות הפעלה": "78",
+    "C++": "89",
+    "Python": "87",
+    "אלגוריתמיקה וגרפים": "100"
+  },
+  "schoolYear": "2021"
+},{
+  "_id": {
+    "$oid": "611100f63b50199361450c31"
+  },
+  "id": "322523275",
+  "firstName": "נעמי",
+  "lastName": "פקטר",
+  "phone": "0583209251",
+  "email": "n3209251@gmail.com",
+  "BalanceOfPayment": "0",
+  "tests": {
+    "הלכה": "100",
+    "השקפה": "99",
+    "תורה": "98",
+    "ירמיהו": "89",
+    "Java": "98",
+    "אנגלית": "100",
+    "מערכות הפעלה": "78",
+    "C++": "89",
+    "Python": "87",
+    "אלגוריתמיקה וגרפים": "100"
+  },
+  "schoolYear": "2021"
+},{
+  "_id": {
+    "$oid": "611102263b50199361450c33"
+  },
+  "id": "324150465",
+  "firstName": "יהודית",
+  "lastName": "רפפורט",
+  "phone": "0504129094",
+  "email": "mrap26555@gmail.com",
+  "BalanceOfPayment": "0",
+  "tests": {
+    "Halacha": "100",
+    "Hashkafa": "99",
+    "Torah": "98",
+    "Yrmiau": "89",
+    "Java": "98",
+    "English": "100",
+    "Operating System": "78",
+    "C++": "89",
+    "Python": "87",
+    "Algorithms on Graphs": "100"
+  },
+  "schoolYear": "2021"
+},{
+  "_id": {
+    "$oid": "611102da3b50199361450c35"
+  },
+  "id": "323867903",
+  "firstName": "עדינה ",
+  "lastName": "סלומון",
+  "phone": "0504103259",
+  "email": "adinas259@gmail.com",
+  "BalanceOfPayment": "0",
+  "tests": {
+    "Halacha": "100",
+    "Hashkafa": "99",
+    "Torah": "",
+    "Yrmiau": "89",
+    "Java": "98",
+    "English": "100",
+    "Operating System": "78",
+    "C++": "89",
+    "Python": "",
+    "Algorithms on Graphs": ""
+  },
+  "schoolYear": "2021"
+},{
+  "_id": {
+    "$oid": "611103033b50199361450c36"
+  },
+  "id": "211981659",
+  "firstName": "שורי",
+  "lastName": "וועג",
+  "phone": "0504103259",
+  "email": "s0556720307@gmail.com",
+  "BalanceOfPayment": "0",
+  "tests": {
+    "Halacha": "100",
+    "Hashkafa": "99",
+    "Torah": "98",
+    "Yrmiau": "89",
+    "Java": "98",
+    "English": "100",
+    "Operating System": "78",
+    "C++": "89",
+    "Python": "87",
+    "Algorithms on Graphs": "100"
+  },
+  "schoolYear": "2021"
+}]
