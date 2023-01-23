@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Card from "react-credit-cards";
 import {
   formatCreditCardNumber,
@@ -32,7 +32,7 @@ export default class StudentPayment extends React.Component {
 
   showSuccess() {
     this.toast.show({ severity: 'success', summary: 'בוצע בהצלחה', detail: 'התבצע תשלום', life: 6000 });
-}
+  }
 
   handleCallback = ({ issuer }, isValid) => {
     if (isValid) {
@@ -48,7 +48,19 @@ export default class StudentPayment extends React.Component {
       focused: target.name
     });
   };
+  getStatus = () => {
+    const id = this.props.match.params.id
+    return axios.get(`http://localhost:8000/api/students/login/${id}`).then(res => res.data)
+  }
+  checkStatus = async () => {
 
+    const id = this.props.match.params.id
+    var s = await this.getStatus()
+    if (s === 0)
+      this.props.history.push(`/studentpermit/${id}`);
+    else if (s === 2)
+      this.props.history.push(`/viewTestPost/${id}`);
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -56,7 +68,7 @@ export default class StudentPayment extends React.Component {
     event.target.reset();//איפוס שדות הקלט
     this.showSuccess();
     //TODO: להעביר את המשתמש לעמוד השלמת מבחנים או לעמוד הפקת אישורי לימודים
-     setInterval(()=> this.props.history.push({pathname:'/studentpermit/'+this.props.match.params.id}),3000) 
+    setTimeout(()=> this.checkStatus(), 3000)
   }
 
   Payment = async () => {

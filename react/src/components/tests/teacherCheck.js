@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import Alert from '@mui/material/Alert';
 import { Button, Container, Row, Col, Form, FormControl, InputGroup } from "react-bootstrap";
 import TextField from '@mui/material/TextField';
 import { Toast } from 'primereact/toast';
 
-export default function CheckTest(props) {
-    const history = props.history;
+export default function CheckTest() {
+    const history = useHistory();
     const { id } = useParams();
     const [test, setTest] = useState();
     const [name, setName] = useState();
@@ -18,8 +18,8 @@ export default function CheckTest(props) {
     const [arrIsCurrect, setArrIsCurrect] = useState([]);
     const toast = useRef(null);
 
-    function saveMark() {
-        axios.put('http://localhost:8000/api/studentToTest', { studentId: studentTest.studentId, mark: mark, subjectId: test.subjectId, id: id, isTeacher: true })
+    async function saveMark() {
+        await axios.put('http://localhost:8000/api/studentToTest', { studentId: studentTest.studentId, mark: mark, subjectId: test.subjectId, id: id, isTeacher: true })
             .then(r => r.data)
             .then(res => { setIsSend(true) })
             .catch(err => console.log(err))
@@ -28,9 +28,8 @@ export default function CheckTest(props) {
             history.push('/Login');
         }, 3000)
     }
-    useEffect(async () => {
-        debugger
-        await axios.get('http://localhost:8000/api/studentToTest/test/' + id)
+    useEffect(() => {
+        axios.get('http://localhost:8000/api/studentToTest/test/' + id)
             .then(r => r.data)
             .then(res => {
                 setStudentTest(res.test)

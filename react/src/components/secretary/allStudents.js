@@ -104,7 +104,6 @@ export default function AllStudents(props) {
 
   async function addTest() {
     setAddMarkDialog(false);
-    debugger
     let arr = [...arrStudents]
     if (subject == 'אחר') {
       await axios.post('http://localhost:8000/api/subject', { subject: newSubject })
@@ -126,7 +125,6 @@ export default function AllStudents(props) {
     setArrStudent(students.filter(s => s.firstName.includes(e) || s.lastName.includes(e)))
   }
   function updateStudent(key) {
-    debugger
     axios.put('http://localhost:8000/api/students', arrStudents[key])
       .then(r => r.data)
       .then(s => {
@@ -136,14 +134,12 @@ export default function AllStudents(props) {
       }).catch(err => console.log(err))
   }
   function deleteMark(s, m) {
-    debugger
     let arr = [...arrStudents]
     arr[s].tests = arr[s].tests.filter((x, i) => i !== m)
     setArrStudent(arr)
     updateStudent(s)
   }
   function deleteStudent() {
-    debugger
     let id = studentId;
     axios.delete('http://localhost:8000/api/students/' + id)
       .then(r => r.data)
@@ -156,7 +152,6 @@ export default function AllStudents(props) {
   }
 
   function setProp(key, prop, value, i) {
-    debugger
     let arr = [...arrStudents]
     if (i != undefined)
       arr[key][prop][i].mark = value
@@ -227,7 +222,6 @@ export default function AllStudents(props) {
   }
   const onChangeDetailsStudentNew = (e, type) => {
     let _studentNew = { ...studentNew };
-    debugger
     _studentNew[`${type}`] = e.target.value;
     setStudentNew(_studentNew);
   }

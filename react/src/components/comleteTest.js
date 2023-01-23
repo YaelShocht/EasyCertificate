@@ -22,7 +22,6 @@ export default function CompleteTest() {
             return arrstudentDetails.data.firstName
     }
     useEffect(() => {
-        debugger
         async function tests() {
             let data = await getTests();
             if (data){
