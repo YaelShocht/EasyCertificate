@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from 'axios';
-import { Button, Container, Row, Col, Form, Table, Modal, FormControl } from "react-bootstrap";
+import { Button, Form, Table } from "react-bootstrap";
 import { useHistory } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -12,13 +12,11 @@ import Autocomplete from '@mui/material/Autocomplete';
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
 import TextField from '@mui/material/TextField';
-import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Dialog } from 'primereact/dialog';
 import { Button as ButtonPrime } from 'primereact/button';
 import { makeStyles } from '@mui/styles';
 import { Toast } from 'primereact/toast';
-import Students from "./insertStudent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
